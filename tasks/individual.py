@@ -33,7 +33,6 @@ def min_max(*args):
 
 
 if __name__ == '__main__':
-    arg = list(map(float, input('Введите список аргументов: ').split()))
-    print("Произведение аргументов, расположенных"
-          " между минимальным и максимальным аргументами:  ",
-          min_max(*arg))
+    print("Введите список аргументов: ")
+    arg = list(map(float, input().split()))
+    print(min_max(*arg))

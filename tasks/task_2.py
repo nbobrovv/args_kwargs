@@ -26,5 +26,4 @@ def harmonic_mean(*args):
 
 if __name__ == '__main__':
     arg = list(map(float, input('Введите список аргументов: ').split()))
-    print("Среднее гармоническое элементов: ",
-          harmonic_mean(*arg))
+    print(harmonic_mean(*arg))

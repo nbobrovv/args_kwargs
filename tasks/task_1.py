@@ -23,5 +23,4 @@ def progression(*argument):
 
 if __name__ == '__main__':
     arg = list(map(float, input('Введите список аргументов: ').split()))
-    print("Среднее геометрическое элементов: ",
-          progression(*arg))
+    print(progression(*arg))
