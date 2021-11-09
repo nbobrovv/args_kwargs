@@ -12,19 +12,19 @@
 
 def harmonic_mean(*args):
     x = 0
-    for i in args:
-        if i == 0:
-            return "Ошибка! В функции присутствует 0"
-        else:
-            x += 1 / float(i)
-    harmonic = 1 / (1 / len(args) * x)
-    return harmonic
+    if args:
+        for i in args:
+            if i == 0:
+                return "На 0 делить нельзя"
+            else:
+                x += 1 / float(i)
+        harmonic = 1 / (1 / len(args) * x)
+        return harmonic
+    else:
+        return None
 
 
 if __name__ == '__main__':
-    try:
-        arg = list(map(float, input('Введите список аргументов: ').split(' ')))
-        print("Среднее гармоническое элементов: ",
-              harmonic_mean(*arg))
-    except ValueError:
-        print(None)
+    arg = list(map(float, input('Введите список аргументов: ').split()))
+    print("Среднее гармоническое элементов: ",
+          harmonic_mean(*arg))

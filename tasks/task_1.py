@@ -11,17 +11,17 @@
 
 
 def progression(*argument):
-    a = 1
-    for i in argument:
-        a *= i
-    a = a ** (1 / len(argument))
-    return a
+    if argument:
+        a = 1.0
+        for i in argument:
+            a *= i
+        a = a ** (1 / len(argument))
+        return a
+    else:
+        return None
 
 
 if __name__ == '__main__':
-    try:
-        arg = list(map(float, input('Введите список аргументов: ').split(' ')))
-        print("Среднее геометрическое элементов: ",
-              progression(*arg))
-    except ValueError:
-        print(None)
+    arg = list(map(float, input('Введите список аргументов: ').split()))
+    print("Среднее геометрическое элементов: ",
+          progression(*arg))
