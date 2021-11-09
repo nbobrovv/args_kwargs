@@ -25,5 +25,6 @@ def harmonic_mean(*args):
 
 
 if __name__ == '__main__':
-    arg = list(map(float, input('Введите список аргументов: ').split()))
+    print('Введите список аргументов: ')
+    arg = list(map(float, input().split()))
     print(harmonic_mean(*arg))
