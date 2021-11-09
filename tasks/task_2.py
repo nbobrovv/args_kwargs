@@ -15,7 +15,7 @@ def harmonic_mean(*args):
     if args:
         for i in args:
             if i == 0:
-                return "На 0 делить нельзя"
+                return None
             else:
                 x += 1 / float(i)
         harmonic = 1 / (1 / len(args) * x)
