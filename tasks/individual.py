@@ -8,6 +8,8 @@
 
 
 def min_max(*args):
+    if len(args) == 0:
+        return None
     # Результат
     composition = 1
     # Индекс и item для максимального
@@ -31,10 +33,7 @@ def min_max(*args):
 
 
 if __name__ == '__main__':
-    try:
-        arg = list(map(float, input('Введите список аргументов: ').split()))
-        print("Произведение аргументов, расположенных"
-              " между минимальным и максимальным аргументами:  ",
-              min_max(*arg))
-    except IndexError:
-        print(None)
+    arg = list(map(float, input('Введите список аргументов: ').split()))
+    print("Произведение аргументов, расположенных"
+          " между минимальным и максимальным аргументами:  ",
+          min_max(*arg))
